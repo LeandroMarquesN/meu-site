@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body> 
+<nav >
+  <ul >
+        <li class="logo">
+            <i class="fa-solid fa-l "></i>
+            <i class="fa-solid fa-m "></i>
+        </li>
+        <li><a href="#home">home</a></li>
+        <li><a href="#sobre">sobre</a></li>
+        <li><a href="#Portfolio">Portfolio</a></li>
+        <li><a href="#Contato">Contato</a></li>
+  </ul>
+</nav>
+
+
+<section id="home">
+
+            <div class="text">
+                <div class="img-leo"></div>
+                
+                <h3><span style="font-size:1.5rem;">Ola,</span>Pessoal !</h3><br>
+                <h1>Eu sou <span>Leandro Marques</span></h1>
+                <h2 style="color: white;">Sou <span class="sp2">desenvolvedor </span> Frontend</h2><button  class="btn"><a class="btna" href="#sobre">Sobre-MIn</a></button>
+
+                <p class="paragrado">Nunca<span style="font-size: 2.2rem;"> esqueça</span>  o lado humano:<br><br>
+
+                    Quanto mais avança a tecnologia, mais respeitado será o Ser que se <span style="font-size:2rem;">mantiver Humano.</span><br>
+                    <cite><span>Marco Aurélio Ferreira</span></cite> <br>
+                    Uma máquina consegue fazer o trabalho de 50 homens ordinários.<br><span style="font-size: 2.2rem;">Mas</span> nenhuma máquina conseguirá <span style="font-size:2.1rem">fazer</span>  o trabalho de um homem <span style="font-size: 3rem;">extraordinário</span>.
+                </p><br>
+                <div class="redes-sociais">
+                    <a href="https://www.facebook.com/leandro.marquesnascimento.7/"><i class="fa-brands fa-facebook fa-bounce  " ></i></a>
+                    <a href="https://www.instagram.com/leandromarquestatoo/?hl=pt-br"><i class="fa-brands fa-instagram "></i></a>
+                    <a href="https://www.linkedin.com/in/leandro-marques-nascimento-2a899746/"><i class="fa-brands fa-linkedin fa-bounce linkedin "></i></a>
+                    <a href="https://github.com/LeandroMarquesN"><i class="fa-brands fa-github "></i></a>
+                </div>
+                <div class="tec">
+                    <i  class="fa-brands fa-linux tec1"></i>
+                    <i class="fa-brands fa-js tec2"></i>
+                    <i class="fa-brands fa-css3-alt tec3"></i>
+                    <i class="fa-brands fa-html5 tec4"></i>
+                    <i class="fa-brands fa-react tec5"></i>
+                    <i class="fa-brands fa-vuejs tec6"></i>
+                    <i class="fa-brands fa-php tec7"></i>
+                    <i class="fa-brands fa-angular tec8"></i>
+                </div>
+            </div>
+            
+    </div>
+</section>
+
+<section id="sobre" >
+  <h1 class="init-hiden">SOBRE</h1>
+</section>
+
+<section id="Portfolio"  >
+  <h1 class="init-hiden">PORTFOLIO</h1>
+ 
+</section>
+
+<section id="Contato" >
+  <h1 class="init-hiden">Contato</h1>
+</section>
+
+<script>
+    // video aula deste codigo : https://www.youtube.com/watch?v=Hgsygm-yMdc&ab_channel=Serliv
+    const  observer = new IntersectionObserver(entries => {
+        console.log(entries)
+
+        Array.from(entries).forEach(entry => {
+            if (entry.intersectionRatio >= 1){
+                entry.target.classList.add('init-hiden-off')
+            }
+        })
+    },{
+        threshold:[0,.5,1]
+    })
+    Array.from(document.querySelectorAll('.init-hiden')).forEach(element =>{
+        observer.observe(element)
+    })
+</script>
+
+</body>
+</html>
